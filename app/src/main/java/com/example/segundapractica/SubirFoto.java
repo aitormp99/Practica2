@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -53,6 +54,8 @@ public class SubirFoto extends AppCompatActivity {
                 StorageReference spaceRef = storageRef.child(editTextSubirNombre.getText().toString());
 
                 spaceRef.putFile(fotoAsubir);
+                limpiar();
+
             }
         });
 
@@ -67,6 +70,12 @@ public class SubirFoto extends AppCompatActivity {
             imageViewSubir.setImageURI(fotoAsubir);
         }
 
+
+    }
+    protected  void limpiar(){
+        editTextSubirNombre.setText(null);
+        imageViewSubir.setImageResource(R.drawable.image_border);
+        Toast.makeText(getBaseContext(),"Foto enviada Correctactemente",Toast.LENGTH_SHORT).show();
 
     }
 }

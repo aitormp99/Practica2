@@ -1,17 +1,22 @@
 package com.example.segundapractica;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,6 +34,19 @@ public class MainActivity extends AppCompatActivity {
         textPassword=findViewById(R.id.edtPass);
         login= findViewById(R.id.btnLogin);
 
+        FirebaseMessaging.getInstance().subscribeToTopic("aplicacion")
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        String msg = "Subscrito Correctamente";
+                        if (!task.isSuccessful()) {
+                            msg = "Fallo en la subscripcion";
+                        }
+                        Log.d("Subscripcion", msg);
+
+                    }
+                });
+
         login.setOnClickListener(new View.OnClickListener() {
 
 
@@ -42,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
                 username = textUsername.getText().toString();
                 password = textPassword.getText().toString();
+
 
 
                 if( !username.equals("") && !password.equals("") ) {
@@ -66,14 +85,14 @@ public class MainActivity extends AppCompatActivity {
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     String result = putData.getResult();
-                                    if(result.equals("Login Success")){
+                                    if(result.equals("Logeado Correctamenete")){
 
-                                        Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(),MenuPrincipal.class);
                                         startActivity(intent);
 
                                     }else{
-                                        Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
                                     }
 
                                 }

@@ -68,7 +68,7 @@ public class Registro extends AppCompatActivity {
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     String result = putData.getResult();
-                                    if(result.equals("Sign Up Success")){
+                                    if(result.equals("Registrado Correctamente")){
 
                                         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
                                         Intent intent = new Intent(getApplicationContext(),MainActivity.class);
