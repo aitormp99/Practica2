@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SegundaPractica</string>
+    <string name="nombreUsuario">Nombre de Usuario:</string>
+    <string name="pass">Contraseña:</string>
+    <string name="iniciarSesion">Iniciar sesión:</string>
+    <string name="nombre">Nombre :</string>
+    <string name="email">Email:</string>
+    <string name="aceptar">aceptar</string>
+    <string name="registrate">No tienes cuenta? registrate</string>
+</resources>

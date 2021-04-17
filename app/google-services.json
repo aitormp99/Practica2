@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "150392031653",
+    "project_id": "segundapractica-2b720",
+    "storage_bucket": "segundapractica-2b720.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150392031653:android:7be4d31e7d80add7b1c04c",
+        "android_client_info": {
+          "package_name": "com.example.segundapractica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150392031653-tif4ic44r5vap6p9pb5d67m7bj88uot9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcegcIdCqTKY8aeslhvlQsjOcWuLF3tJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "150392031653-tif4ic44r5vap6p9pb5d67m7bj88uot9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
