@@ -7,4 +7,9 @@
     <string name="email">Email:</string>
     <string name="aceptar">aceptar</string>
     <string name="registrate">No tienes cuenta? registrate</string>
+    <string name="changed_to">Notificacion cambiada a las %s</string>
+    <string name="time_selected_is">La hora seleccionada es:</string>
+    <string name="change_time">Cambia la hora</string>
+    <string name="select_time">Selecciona la hora</string>
+    <string name="new_notification">Nueva notificación</string>
 </resources>

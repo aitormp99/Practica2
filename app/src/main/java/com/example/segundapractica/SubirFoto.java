@@ -34,7 +34,7 @@ public class SubirFoto extends AppCompatActivity {
 
         imageViewSubir = findViewById(R.id.imageView2);
 
-
+        /*abrir la galeria del movil*/
         bGaleriaFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +43,7 @@ public class SubirFoto extends AppCompatActivity {
 
             }
         });
-
+        /*subir la foto al storage de firebase*/
         bSubirImagen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,7 +61,7 @@ public class SubirFoto extends AppCompatActivity {
 
 
     }
-
+    /*Metodo para obtener la foto de nuestra galeria*/
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         super.onActivityResult(requestCode, resultCode, data);
@@ -72,6 +72,7 @@ public class SubirFoto extends AppCompatActivity {
 
 
     }
+    /*Metodo que limpia los campos al subir una foto*/
     protected  void limpiar(){
         editTextSubirNombre.setText(null);
         imageViewSubir.setImageResource(R.drawable.image_border);

@@ -36,7 +36,8 @@ public class Registro extends AppCompatActivity {
 
 
 
-
+            /*Metodo para subir los datos de usuario a signup php
+             usando la  dependencia implementation 'com.github.VishnuSivadasVS:Advanced-HttpURLConnection:1.2'*/
             @Override
             public void onClick(View v) {
                 String fullname, username,password,email;

@@ -30,7 +30,7 @@ public class VerImagenes extends AppCompatActivity {
         bCargarfoto = findViewById(R.id.downloadBtn);
         imageViewCargar = findViewById(R.id.imageView3);
 
-
+        /*Metodo para descargar la foto indicada desde el storage de firebase a la aplicacion*/
         bCargarfoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

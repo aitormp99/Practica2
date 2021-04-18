@@ -10,6 +10,7 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
+    /*Metodo para controlar las notificaciones de firebase cuando la aplicacion no esta en segundo plano*/
 
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {

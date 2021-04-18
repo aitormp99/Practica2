@@ -54,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
 
 
             @Override
+            /*Metodo para subir el username y pass a login php
+             usando la  dependencia implementation 'com.github.VishnuSivadasVS:Advanced-HttpURLConnection:1.2'*/
+
             public void onClick(View v) {
 
                 String  username,password;
